@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-4" *ngFor="let link of links">
+    <div class="card">
+      <img class="card-img-top" [src]="link.image" [alt]="link.name">
+      <div class="card-body">
+        <h5 class="card-title">{{link.name}}</h5>
+        <p class="card-text">{{link.description}}</p>
+        <button class="btn btn-primary btn-block" [routerLink]="[link.button.url]">{{link.button.text}}</button>
+      </div>
+    </div>
+  </div>
+</div>

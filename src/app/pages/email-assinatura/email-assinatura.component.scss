@@ -1,0 +1,99 @@
+div.assinatura {
+  background: #242d37;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  div.picture {
+    background: transparent;
+    width: 180px;
+    display: block;
+    float: left;
+    padding: 20px 0;
+
+    div.img-round {
+      border: 16px solid #C42123;
+      border-radius: 100%;
+      position: relative;
+      width: 140px;
+      height: 140px;
+      display: block;
+      margin: auto;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 100%;
+      }
+    }
+    div.img-round::after {
+      content: '';
+      width: 19px;
+      height: 18px;
+      left: -18px;
+      top: calc(50% - 8px);
+      position: absolute;
+      background: #242d37;
+      display: block;
+    }
+    div.img-round::before {
+      content: '';
+      width: 19px;
+      height: 18px;
+      left: calc(100% - 1px);
+      top: calc(50% - 8px);
+      position: absolute;
+      background: #242d37;
+      display: block;
+    }
+  }
+  div.detalhes {
+    background: transparent;
+    width: calc(100% - 180px);
+    display: block;
+    float: left;
+    padding: 10px 0 0 0;
+    color: white;
+    p {
+      margin: 0;
+    }
+    p.name {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    p.info {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+  div.sign-footer {
+    background: transparent;
+    width: calc(100% - 0px);
+    display: block;
+    float: left;
+    padding: 10px 0 0 0;
+    color: white;
+  }
+}
+
+div.assinatura::before {
+  //content: "";
+  //width: 376px;
+  //height: 100%;
+  //left: -190px;
+  //top: -40px;
+  //position: absolute;
+  //display: block;
+  //transform: rotate(-49deg);
+  //background: linear-gradient(red, yellow);
+
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  border: 0 solid transparent;
+  border-right-width: 180px;
+  border-top: 180px solid black;
+  position: absolute;
+}
